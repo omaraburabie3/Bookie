@@ -89,7 +89,6 @@ const books = [
 // DISPLAY CARDS OF BOOKS
 for (let i = 0; i <= books.length; i++) {
   const cards = document.querySelector("#cards");
-  // console.log(main);
   const card = document.createElement("div");
   card.className = "card";
   const bookCard = `<img src=${books[i].image} />
