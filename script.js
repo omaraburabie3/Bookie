@@ -91,11 +91,23 @@ for (let i = 0; i <= books.length; i++) {
   const cards = document.querySelector("#cards");
   const card = document.createElement("div");
   card.className = "card";
-  const bookCard = `<img src=${books[i].image} />
-        <h2 class="para">${books[i].name}</h2>
-        <span class="author">${books[i].author}</span>
-        <p class="price">${books[i].price}</p>`;
-  card.innerHTML += bookCard;
+  const images = document.createElement("img");
+  images.setAttribute("src", books[i].image);
+  images.setAttribute("alt", "books");
+  const title = document.createElement("h2");
+  title.className = "para";
+  title.textContent = books[i].name;
+  const author = document.createElement("span");
+  author.className = "author";
+  author.textContent = books[i].author;
+  const price = document.createElement("p");
+  price.className = "price";
+  price.textContent = books[i].price;
   cards.appendChild(card);
+  card.appendChild(images);
+  card.appendChild(title);
+  card.appendChild(author);
+  card.appendChild(price);
+  
 }
 // END BOOKS CARDS SECTION
