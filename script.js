@@ -108,6 +108,14 @@ for (let i = 0; i <= books.length; i++) {
   card.appendChild(title);
   card.appendChild(author);
   card.appendChild(price);
+  //make delete button for delet card from page
+  const deleteBtn = document.createElement("button");
+  deleteBtn.className = "delete";
+  deleteBtn.textContent = "Delete";
+  card.appendChild(deleteBtn);
+  deleteBtn.addEventListener("click", () => {
+    card.remove();
+  });
   
 }
 // END BOOKS CARDS SECTION
