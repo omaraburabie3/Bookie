@@ -146,9 +146,8 @@ function renderAllCard() {
 }
 
 // START DELETE BOOK FUNCTIONLTY
-function deleteBtnCard(books, id) {
+function deleteBtnCard(books) {
   const deleteBtn = document.getElementById(books.id);
-  // const deleteBtn = document.getElementById(books.id);
   deleteBtn.addEventListener("click", () => {
     deleteBtn.parentNode.remove();
   });

@@ -19,7 +19,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* height: 5rem; */
   z-index: -999;
   font-size: 1.2rem;
   width: 100%;
@@ -58,7 +57,6 @@ header {
 }
 .inf {
   font-family: "Signika", sans-serif;
-
   text-align: center;
   color: rgb(11, 54, 54);
   margin-top: 2.5rem;
@@ -140,7 +138,7 @@ header {
   text-decoration: none;
 }
 .button:hover {
-  background-color: rgb(12, 66, 66);
+  background-color: rgb(13, 82, 82);
 }
 .popup {
   position: fixed;
@@ -155,7 +153,7 @@ header {
 .popup-content {
   width: 450px;
   height: 500px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(229, 233, 232);
   border-radius: 5px;
   position: relative;
   padding: 1rem;
@@ -191,21 +189,15 @@ header {
   color: rgb(12, 66, 66);
 }
 .inf-book label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: left;
   margin-top: 0.4rem;
   color: rgb(12, 66, 66);
-  display: block;
+  margin-right: 120px;
 }
-/* font-size: 1.2rem;
-  text-align: center;
-  margin-top: 0.5rem;
-  color: rgb(12, 66, 66);
-  border: none;
-  outline: none; */
 
 .inf-book #imags {
-  width: 100px;
+  width: 244px;
 }
 .inf-book input {
   background: rgba(255, 255, 255, 0.1);
@@ -215,11 +207,12 @@ header {
   margin: 0;
   outline: 0;
   padding: 15px;
-  width: 100%;
-  background-color: #e8eeef;
-  color: #95a4af;
+  width: 244px;
+  background-color: #f3fafa;
+  color: #0c0f11;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom: 30px;
+  font-weight: 400;
 }
 
 .inf-book #submit {
@@ -227,7 +220,6 @@ header {
   height: 40px;
   border: none;
   outline: none;
-  /* border-bottom: 1px solid rgb(12, 66, 66); */
   font-size: 1rem;
   text-align: center;
   color: rgb(12, 66, 66);
@@ -243,10 +235,10 @@ header {
 .inf-book #submit:active {
   background-color: rgb(27, 116, 96);
 }
+/* //media queries for other devices */
 @media all and (max-width: 480px) {
   header {
     flex-direction: column;
-    /* position: relative; */
   }
   .logo {
     font-size: 2rem;
