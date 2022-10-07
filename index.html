@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Bookie</title>
   </head>
@@ -28,8 +28,26 @@
     </header>
 
     <!-- END HEADER SECTION -->
-
-    <section id="cards"></section>
+<div class="container">
+        <a href="" class="button"> Click to Add Books  </a>
+      </div>
+      <div class="popup">
+        <div class="popup-content">
+          <span class="close">&times</span>
+          <form class="inf-book">
+            <label for="imags"> URL image  :</label>
+            <input type="url" id="imags" name="imags" accept="imgs/*" required/>
+            <label for="bookname">Book Name :</label>
+            <input type="text" id="bookname" name="bookname" required/>
+            <label for="authorname">Book Author :</label>
+            <input type="text" id="authorname" name="authorname" required/>
+            <label for="bookprice">Book Price :</label>
+            <input type="text" id="bookprice" name="bookprice" required/>
+            <button type="submit" class="submite" id="submit">Submit<button>
+          </form>
+        </div>
+      </div>
+    <section id="cards"></section> 
     <script src="script.js"></script>
-  </body>
+  </body> 
 </html>
