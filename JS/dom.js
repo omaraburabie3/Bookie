@@ -26,7 +26,7 @@ function renderOneCard(book) {
   card.appendChild(deleteBtn);
   deleteBtnCard(book);
   //fav. icon
-  if (window.location.href.toString().includes("index.html")) {
+  if (window.location.href.toString().includes("index.html", ) || window.location.href.toString().includes("Bookie")) {
     renderFavIcon(card, book);
   }
 }
