@@ -1,3 +1,6 @@
+if (!localStorage.getItem("favList")) {
+  localStorage.setItem("favList", JSON.stringify([]));
+}
 const books = [
   {
     id: "1",
@@ -103,55 +106,14 @@ toogleButton.addEventListener("click", () => {
   navList.classList.toggle("active");
 });
 
-addButton.addEventListener("click", () => {
+addButton.addEventListener("click", (e) => {
+  e.preventDefault();
   form.style.display = "flex";
 });
 closeButton.addEventListener("click", () => {
   form.style.display = " none ";
 });
-// START RENDER ONE CARD FUNCTIONLTY
-function renderOneCard(books) {
-  const cards = document.querySelector("#cards");
-  const card = document.createElement("div");
-  card.className = "card";
-  cards.appendChild(card);
-  const images = document.createElement("img");
-  images.src = books.image;
-  images.setAttribute("alt", "bookss");
-  card.appendChild(images);
-  const title = document.createElement("h2");
-  title.className = "para";
-  title.textContent = books.name;
-  card.appendChild(title);
-  const author = document.createElement("span");
-  author.className = "author";
-  author.textContent = books.author;
-  card.appendChild(author);
-  const price = document.createElement("p");
-  price.className = "price";
-  price.textContent = books.price;
-  card.appendChild(price);
-  const deleteBtn = document.createElement("button");
-  deleteBtn.className = "delete";
-  deleteBtn.textContent = "Delete";
-  deleteBtn.setAttribute("id", books.id);
-  card.appendChild(deleteBtn);
-  deleteBtnCard(books);
-}
-// START RENDER ALL CARDS FUNCTIONLTY
-function renderAllCard() {
-  for (let i = 0; i < books.length; i++) {
-    renderOneCard(books[i]);
-  }
-}
 
-// START DELETE BOOK FUNCTIONLTY
-function deleteBtnCard(books) {
-  const deleteBtn = document.getElementById(books.id);
-  deleteBtn.addEventListener("click", () => {
-    deleteBtn.parentNode.remove();
-  });
-}
 // START ADD BOOK FUNCTIONLTY
 function addbook(books) {
   let newBook = {
@@ -168,8 +130,7 @@ document.querySelector(".inf-book").addEventListener("submit", (e) => {
   addbook(books);
   renderOneCard(books[books.length - 1]);
   form.style.display = "none";
-  console.log("DONE!");
+  // console.log("DONE!");
 });
-renderAllCard();
 
-// END BOOKS CARDS SECTION
+renderAllCard(books);

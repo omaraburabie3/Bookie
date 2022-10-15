@@ -141,6 +141,7 @@ header {
   background-color: rgb(13, 82, 82);
 }
 .popup {
+  display:none;
   position: fixed;
   top: 0;
   left: 0;
@@ -278,3 +279,22 @@ header {
     height: 470px;
   }
 }
+
+/* start style for favorite icon  */
+#cards .card .ri-heart-line {
+  font-size: 1.7rem;
+  color: rgb(12, 66, 66);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  
+}
+#cards .card .ri-heart-fill{
+  font-size: 1.7rem;
+  color: rgb(231, 41, 16);
+  cursor: pointer;
+  margin-top: 0.5rem;
+
+}
+
+
+/* end style for favorite icon  */
